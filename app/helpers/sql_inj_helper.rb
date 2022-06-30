@@ -1,0 +1,2 @@
+module SqlInjHelper
+end

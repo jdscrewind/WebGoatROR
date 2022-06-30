@@ -1,0 +1,18 @@
+<h1>XSS</h1>
+<% # 8 Reflected XSS on view %>
+<div>XSS 1: <%= raw @param_script %></div> <% # CHECKED by brakeman %>
+
+<div>XSS 2: <%== @param_script %></div> <% # CHECKED by brakeman %>
+
+<div>XSS 3: <%= @param_script.html_safe %></div> <% # CHECKED by brakeman %>
+
+<div>XSS 4: <%= content_tag @param_cont_tag %></div> <% # CHECKED by brakeman %>
+
+<div>// Check CSP</div>
+<div>XSS 5: <%= link_to "Click here to XSS", @param_href %> <- RUBY OLDER VERSIONS</div> <% # CHECKED by brakeman %>
+
+<div>XSS 6: <%= link_to "Click here to XSS 2", @param_href.html_safe() %> <- RUBY NEWER VERSIONS</div> <% # CHECKED by brakeman %>
+
+<div>XSS 7: <a href="<%= @param_href %>">Click here to XSS 3</a></div>
+
+<div>XSS 8: <a href="#" onclick="<%= @param_js %>">Click here to XSS 4</a></div>

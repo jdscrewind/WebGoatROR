@@ -1,0 +1,8 @@
+<h1>SQL Injection</h1>
+<ul>
+  <% @records.each do |rec| %>
+    <li>
+      <a href="/proj/<%= rec.id %>"><%= rec.desc %></a>
+    </li>
+  <% end %>
+</ul>
