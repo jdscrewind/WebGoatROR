@@ -33,9 +33,12 @@ gem 'rack-cors', require: 'rack/cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  # Debug on VS Code
   gem "ruby-debug-ide", require: false
   gem "debase", require: false
+  # Checks for security vulnerabilities (SAST)
+  gem 'brakeman', :require => false
+  gem 'dawnscanner', :require=>false
 end
 
 group :development do

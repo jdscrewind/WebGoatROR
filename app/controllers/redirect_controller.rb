@@ -1,4 +1,5 @@
 class RedirectController < ApplicationController
+  # 1 Open Redirect
   def index
     param_red = params[:param_red] || ''
 
@@ -9,7 +10,7 @@ class RedirectController < ApplicationController
 
   def bad
   end
-
+  # 1 Dynamic Render Path
   def renderm
     param_render = params[:param_render] || ''
     # params_aux does not work like this
@@ -17,6 +18,6 @@ class RedirectController < ApplicationController
     params[:param_bad] = "A vulnerable view was rendered!"
     params[:title_bad] = "Attacker's Render"
 
-    render param_render, params: params_aux
+    render param_render, params: params_aux   # CHECKED by brakeman
   end
 end

@@ -33,11 +33,10 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# /log
 /node_modules
 /public/packs
 /public/packs-test
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-webGoatRor_brakeman_results.html
+webGoatROR_brakeman_Gem.html
