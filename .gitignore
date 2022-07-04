@@ -40,3 +40,4 @@
 yarn-debug.log*
 .yarn-integrity
 webGoatROR_brakeman_Gem.html
+webGoatROR_brakeman_Docker.html

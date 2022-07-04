@@ -21,5 +21,8 @@ class HomeController < ApplicationController
     
     @url_render = "/dyn_render/?" +
       "param_render=bad"
+
+    @url_ssrf = "/ssrf/?" +
+    "param_ssrf=https://example.com"
   end
 end
