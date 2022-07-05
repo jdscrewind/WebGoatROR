@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'dyn_render', to: 'redirect#renderm'
   # SSRF
   get 'ssrf', to: 'ssrf#index'
+  # SSRF
+  get 'deserialize', to: 'deserialize#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'home#index'
 end

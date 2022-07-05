@@ -23,6 +23,9 @@ class HomeController < ApplicationController
       "param_render=bad"
 
     @url_ssrf = "/ssrf/?" +
-    "param_ssrf=https://example.com"
+      "param_ssrf=https://example.com"
+    
+    @url_deser = "/deserialize/?" +
+      "param_deser=User"
   end
 end
