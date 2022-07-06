@@ -26,6 +26,8 @@ class HomeController < ApplicationController
       "param_ssrf=https://example.com"
     
     @url_deser = "/deserialize/?" +
-      "param_deser=User"
+      "param_deser=\x04\bI\"\x11hello world!\x06:\x06ET&" +
+      'param_deser2=U: DeserializeController::User{:fullnameI"Mehdi Farsi:ET'
+      # "param_deser2=U: DeserializeController::User{:agei/:fullnameI\"Mehdi Farsi:ET"
   end
 end
