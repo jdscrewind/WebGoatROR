@@ -29,5 +29,12 @@ class HomeController < ApplicationController
       "param_deser=\x04\bI\"\x11hello world!\x06:\x06ET&" +
       'param_deser2=U: DeserializeController::User{:fullnameI"Mehdi Farsi:ET'
       # "param_deser2=U: DeserializeController::User{:agei/:fullnameI\"Mehdi Farsi:ET"
+    
+    @url_xxe = "/xxe/?" +
+      'param_xxe=<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///Rakefile"> ]>' +
+        '<userInfo>' +
+        '<firstName>John</firstName>' +
+        '<lastName>%26ent;</lastName>' +
+        '</userInfo>'
   end
 end

